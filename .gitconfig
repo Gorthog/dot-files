@@ -12,3 +12,6 @@
 
 [interactive]
     diffFilter = delta --color-only
+
+[core]
+	editor = micro
