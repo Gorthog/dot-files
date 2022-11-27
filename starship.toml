@@ -6,7 +6,19 @@ add_newline = true
 # Change the default prompt format
 format = """\
 [╭╴](238) \
-$all[╰─](238)$character"""
+$username\
+$directory\
+$git_branch\
+$git_status\
+$kubernetes\
+$terraform\
+$vagrant\
+$docker_context\
+$helm\
+$python\
+$nodejs\
+$ruby\
+\n[╰─](238)$character"""
 
 # Change the default prompt characters
 [character]
@@ -15,17 +27,21 @@ error_symbol = "[](238)"
 
 # Shows the username
 [username]
-style_user = "white bold"
-style_root = "black bold"
-format = "[$user]($style) "
+style_user = "yellow bold"
+style_root = "red bold"
+format = "[$user]($style) at"
 disabled = false
-show_always = true
+show_always = false
 
 [directory]
 home_symbol = " ~"
 read_only_style = "197"
 read_only = "  "
-format = "at [$path]($style)[$read_only]($read_only_style) "
+format = "[$path]($style)[$read_only]($read_only_style) "
+
+[kubernetes]
+format = 'on [ $context\($namespace\)](bold purple) '
+disabled = false
 
 [git_branch]
 symbol = " "
@@ -69,10 +85,6 @@ disabled = false
 
 [ruby]
 format = "via [ $version]($style) "
-
-[kubernetes]
-format = 'on [ $context\($namespace\)](bold purple) '
-disabled = false
 
 [aws]
 disabled = true
