@@ -1,8 +1,10 @@
 if status is-interactive
-    set -gx PNPM_HOME "/home/amir/.local/share/pnpm"
-    fish_add_path /home/linuxbrew/.linuxbrew/bin $HOME/.krew/bin $HOME/.cargo/bin $HOME/.local/bin $HOME/.bun/bin $PNPM_HOME
+    set -gx PNPM_HOME "~/.local/share/pnpm"
+    fish_add_path /home/linuxbrew/.linuxbrew/bin $HOME/.krew/bin $HOME/.cargo/bin $HOME/.local/bin $HOME/.bun/bin $PNPM_HOME /opt/homebrew/bin
     set -Ux BUN_INSTALL $HOME/.bun
     set _ZO_ECHO 1
+    set -gx EDITOR micro
+    procs --gen-completion-out fish | source
     starship init fish | source
     zoxide init fish | source
     abbr cat bat -p
@@ -12,7 +14,7 @@ if status is-interactive
     abbr rm-ids "fd -H '.*:Zone.Identifier' -x rm"
     abbr start explorer.exe
     abbr maip http -pb ifconfig.me
-    abbr top btop
+    abbr top btm
     abbr ps procs
     abbr cd z
     abbr tree br
@@ -22,6 +24,7 @@ if status is-interactive
     abbr du dua
     abbr diff delta
     abbr fd fd -H
+    abbr gr "cd (git rev-parse --show-toplevel)"
     
     # I couldn't find a way to permanently set ulimit in WSL. but this works
     ulimit -Sn 65535
