@@ -1,5 +1,5 @@
 if status is-interactive
-    set -gx PNPM_HOME "~/.local/share/pnpm"
+    set -gx PNPM_HOME $HOME/.local/share/pnpm
     fish_add_path /home/linuxbrew/.linuxbrew/bin $HOME/.krew/bin $HOME/.cargo/bin $HOME/.local/bin $HOME/.bun/bin $PNPM_HOME /opt/homebrew/bin
     set -Ux BUN_INSTALL $HOME/.bun
     set _ZO_ECHO 1
