@@ -17,7 +17,7 @@ install qalc
 ```
 set latest (http https://api.github.com/repos/Qalculate/qalculate-gtk/releases/latest | fx .tag_name | string sub -s 2)
 http -d https://github.com/Qalculate/qalculate-gtk/releases/download/v$latest/qalculate-$latest-(uname -m).tar.xz | tar zxf -
-cp qalculate-$latest/qalc /usr/local/bin
+sudo cp qalculate-$latest/qalc /usr/local/bin
 rm -rf qalculate-$latest
 ```
 
