@@ -48,3 +48,11 @@ auto run docker on wsl start
 ```
 printf '[boot]\ncommand = "service docker start"' | sudo tee -a /etc/wsl.conf
 ```
+
+install jwt-cli on ubuntu
+```
+sudo apt install build-essential
+brew install rust
+cargo install jwt-cli
+```
+
