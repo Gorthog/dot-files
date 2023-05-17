@@ -55,4 +55,10 @@ sudo apt install build-essential
 brew install rust
 cargo install jwt-cli
 ```
-
+chezmoi config file
+at ~/.config/chezmoi/chezmoi.toml
+```
+[git]
+    autoCommit = true
+    autoPush = true
+```
